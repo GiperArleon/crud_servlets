@@ -6,12 +6,13 @@ import java.util.concurrent.ConcurrentHashMap;
 import com.app.model.Student;
 
 public class StudentDaoImpl implements StudentDao{
-
+    private int currentId = 0;
 	private static final ConcurrentHashMap<Integer, Student> storage = new ConcurrentHashMap<>();
 
 	@Override
 	public void addStudent(Student student) {
-		student.setStudentId(storage.size() + 2);
+        currentId += 2;
+		student.setStudentId(currentId);
 		storage.put(student.getStudentId(), student);
 	}
 
