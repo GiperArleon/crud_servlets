@@ -11,7 +11,7 @@ public class StudentDaoImpl implements StudentDao{
 
 	@Override
 	public void addStudent(Student student) {
-		student.setStudentId(storage.size());
+		student.setStudentId(storage.size() + 2);
 		storage.put(student.getStudentId(), student);
 	}
 
