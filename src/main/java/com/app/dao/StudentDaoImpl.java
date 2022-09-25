@@ -7,7 +7,7 @@ import java.util.concurrent.atomic.AtomicInteger;
 import com.app.model.Student;
 
 public class StudentDaoImpl implements StudentDao {
-    private static final int STEP = 1;
+    private static final int STEP = 2;
     private final AtomicInteger currentId = new AtomicInteger(0);
 	private static final ConcurrentHashMap<Integer, Student> storage = new ConcurrentHashMap<>();
 

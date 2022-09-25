@@ -2,7 +2,6 @@ package com.app.servlet;
 
 import java.io.IOException;
 import javax.servlet.RequestDispatcher;
-import javax.servlet.ServletConfig;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -64,16 +63,5 @@ public class StudentServlet extends HttpServlet {
         RequestDispatcher view = request.getRequestDispatcher(lIST_STUDENT);
         request.setAttribute("students", dao.getAllStudents());
         view.forward(request, response);
-    }
-
-    @Override
-    public void init(ServletConfig config) throws ServletException {
-        super.init(config);
-    }
-
-    @Override
-    public void destroy() {
-        dao.clearAll();
-        super.destroy();
     }
 }
