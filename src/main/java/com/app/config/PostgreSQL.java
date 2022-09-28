@@ -1,13 +1,12 @@
 package com.app.config;
 
 import lombok.extern.slf4j.Slf4j;
-
 import java.sql.Connection;
 import java.sql.DriverManager;
 
 @Slf4j
 public class PostgreSQL {
-    private static final String url = "jdbc:postgresql://localhost:5432/crud";
+    private static final String url = "jdbc:postgresql://10.0.2.6:5432/crud";
     private static final String user = "postgres";
     private static final String password = "1qazse4";
 
